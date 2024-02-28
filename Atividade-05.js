@@ -1,12 +1,13 @@
-//crie uma função que receba com parâmetro o ano de nascimento de uma pessoa a retorne sua idade
+//função retorno de idade
 function idade(ano2) {
-  return 2024 - ano2
+  return 2024 - ano2;
 }
-console.log(`${idade(2007)}`);
+var nome = "L&L";
+console.log(`Olá eu sou a ${nome} e tenho ${idade(2007)} anos de idade!`);
 
-console.log(`-----------------------------------`)
+console.log(`------------------------------------------`);
 //Atividade 2
-function combustivel (litros,km){
-    return litros * km 
+function media(litros, kml) {
+  return litros * kml;
 }
-console.log(`Ele pode viajar: ${combustivel(45, 12)} kms`)
+console.log(`Ele pode viajar: ${media(45, 12)} kms`);
