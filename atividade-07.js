@@ -54,33 +54,58 @@ const tabuleiro = [
   [" ", " ", " "],
   [" ", " ", " "],
 ];
-let jogadorX = "X";
-let jogadorO = "O";
+let jogadorAtual = "X";
 
 function jogar(jogador) {
   let linha, coluna;
+
   do {
     linha = Math.floor(Math.random() * 3);
     coluna = Math.floor(Math.random() * 3);
-  } while (tabuleiro[linha][coluna] !== " ");
+  } while (tabuleiro[0][0] !== " ");
 
   tabuleiro[linha][coluna] = jogador;
+  jogadorAtual = jogadorAtual === "X" ? "O" : "X";
 }
-jogar(jogadorO);
-jogar(jogadorX);
-jogar(jogadorO);
-jogar(jogadorX);
-jogar(jogadorO);
-jogar(jogadorX);
-jogar(jogadorO);
-jogar(jogadorX);
-jogar(jogadorX);
 
-console.table(tabuleiro);
-
-//verificando as linhas
-for (let i = 0; i < 3; i++){
-    if (
-        tabuleiro[i][0] === tabuleiro[i][1]&&
-    )
+function verificaVencedor(){
+  for (let i = 0; i < 3; i++) {
+   //verificando coluna
+   if (
+    tabuleiro[0][0] === tabuleiro[1][i] &&
+    tabuleiro[1][i] === tabuleiro[2][i] &&
+    tabuleiro [i][i] !== " "
+  ) 
+  {
+    console.log(`o jgador ${tabuleiro[1][i]} ganhou`);
+    return tabuleiro[1][i];
 }
+
+else if (
+    tabuleiro[i][0] === tabuleiro[i][1] &&
+    tabuleiro[i][1] === tabuleiro[i][2] &&
+    tabuleiro [i][i] !== " "
+   ) {
+    console.log(`o jogador ${tabuleiro[1][i]} ganhou`);
+    return tabuleiro[1][i];
+  }
+
+  else if (
+    tabuleiro[0][0] === tabuleiro[1][1] &&
+    tabuleiro[1][1] === tabuleiro[2][2] &&
+    tabuleiro [1][1] !== " "
+    ) {
+      console.log(`o jogador ${tabuleiro[1][i]} ganhou`);
+    return tabuleiro[1][i];
+    } else if 
+    (
+      tabuleiro[0][2] === tabuleiro[1][1] &&
+      tabuleiro[1][1] === tabuleiro[2][0] &&
+      tabuleiro [1][1] !== " "
+    ) {
+      console.log(`o jogador ${tabuleiro[1][i]} ganhou`);
+    return tabuleiro[1][i];
+    }
+    
+  }
+  }
