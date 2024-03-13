@@ -78,9 +78,9 @@ function extrairNumero(str) {
   return str.match(/\d+/g).map(Number);
 }
 
-console.log(extrairNumero("Tenho 2 maçãs e 3 laranjas"));
-console.log(extrairNumero("temperatura é de 25 graus"));
-console.log(extrairNumero("O número de telefone é 123-456-7890"));
+console.log(extrairNumero("Tenho 5 bananas e 8 melancias"));
+console.log(extrairNumero("A temperatura é de -01 graus"));
+console.log(extrairNumero("O número de telefone é 36221635"));
 
 function inverterOrdemPalavras(frase) {
   return frase.split(" ").reverse().join(" ");
