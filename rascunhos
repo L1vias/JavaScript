@@ -1,0 +1,24 @@
+class Sorvete {
+  constructor(sabor, preco, tamanho) {
+    this.sabor = sabor;
+    this.preco = preco;
+    this.tamanho = tamanho;
+  }
+
+  alterarPreco(novoPreco) {
+    this.preco = novoPreco;
+  }
+}
+
+// Criando os sorvetes conforme solicitado
+const sorveteMorangoGrande = new Sorvete("morango", 20, "G");
+const sorveteChocolatePequeno = new Sorvete("chocolate", 35, "P");
+const sorveteMelanciaMedio = new Sorvete("melancia", 55, "M");
+
+// Alterando o preço do sorvete de morango grande para R$ 10,51
+sorveteMorangoGrande.alterarPreco(10.51);
+
+// Exibindo os sorvetes criados
+console.log("Sorvete de morango grande:", sorveteMorangoGrande);
+console.log("Sorvete de chocolate pequeno:", sorveteChocolatePequeno);
+console.log("Sorvete de melancia médio:", sorveteMelanciaMedio);
